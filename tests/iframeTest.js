@@ -15,3 +15,9 @@ test("iFrame Test", async t =>{
         .expect(textArea.innerText).contains('Larissa')
         .switchToMainWindow();
 });
+
+test
+    ("Navigate Test", async t =>{
+        await t
+            .navigateTo("http://www.google.com");
+    });
