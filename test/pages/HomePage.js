@@ -9,7 +9,7 @@ class HomePage{
         this.shoppingCartLink = Selector('a').withText('Shopping cart')
         this.myAccountLink = Selector('a').withText('My Account')
         this.logOutLink = Selector('a').withText('Log out')
-        this.currencyList = Selector('select#customerCurrency')
+        this.currencyList = Selector('select#customerCurrency');
     }
 
     get productSearch(){
@@ -31,4 +31,4 @@ class HomePage{
 
 }
 
-export default new HomePage
+export default new HomePage();
