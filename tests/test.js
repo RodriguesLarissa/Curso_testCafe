@@ -34,10 +34,14 @@ fixture.meta('version', '1')("Tests")
 
 test.only
     ("First Test", async t =>{
+        const developerNameElement = 
+        await developerName.with({ visibilityCheck: true })();
         await t
             .typeText(developerName, "Larissa")
             .click(macOption)
+            .takeElementScreenshot(submitButton)
             .click(submitButton)
+            .takeScreenshot()
             .expect(getPageURL()).contains('thank-you');
     });
 

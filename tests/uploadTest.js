@@ -11,5 +11,6 @@ test("File Upload Test", async t =>{
         .setFilesToUpload(fileUpload, '../upload/img.jpg')
         .clearUpload(fileUpload)
         .setFilesToUpload(fileUpload, '../upload/img.jpg')
+        .debug()
         .click(fileUploadButton);
 });

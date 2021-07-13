@@ -1,0 +1,40 @@
+Comando Terminal
+
+//Metadata
+--test-meta env=production
+--fixture-meta
+
+//Browser
+testcafe --list-browsers
+testcafe chrome, safari tests.js
+testcafe all tests.js
+
+//Multiple Tests
+testcafe -c 3 chrome tests.js
+
+//LiveMode
+testcafe chrome tests.js -L
+
+//Filter by Name
+testcafe chrome tests.js -t "Test Name"
+(Optional) In the code:
+.filter(testName => testName === "Click a Label")
+
+//Headless
+testcafe "chrome:headless" ./tests/
+
+//Emulation
+testcafe "chrome:emulation:device=iphone X" ./tests/test.js
+
+//Debug Mode On Fail
+testcafe chrome tests.js --debug-on-fail
+
+//ScreenShots on Fail
+testcafe chrome tests.js -s takeOnFails=true
+
+//Videos
+testcafe chrome tests.js --video artifacts/videos
+    failedOnly(boolean)
+    singleFile(boolean)
+    ffmpegPath(string)
+    pathPattern(string)
