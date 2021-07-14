@@ -2,7 +2,7 @@ import { Selector, t } from "testcafe";
 
 class RegisterPage{
     constructor(){
-        this.genderOption = Selector('gender-male')
+        this.genderOption = Selector('#gender-female')
         this.firstName = Selector('input#FirstName')
         this.lastName = Selector('input#LastName')
         this.birthDayList = Selector("select[name='DateOfBirthDay']")
@@ -20,6 +20,20 @@ class RegisterPage{
         await t
             .click(this.birthDayList)
             .click(DayOption.withText(day));
+    }
+
+    async selectMonth(month){
+        const MonthOption = this.birthMonthList.find('option');
+        await t
+            .click(this.birthMonthList)
+            .click(MonthOption.withText(month));
+    }
+
+    async selectYear(day){
+        const YearOption = this.birthYearList.find('option');
+        await t
+            .click(this.birthYearList)
+            .click(YearOption.withText(day));
     }
 }
 

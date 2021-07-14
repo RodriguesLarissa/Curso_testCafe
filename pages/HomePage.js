@@ -2,13 +2,13 @@ import { Selector, t } from "testcafe";
 
 class HomePage{
     constructor(){
-        this.subTitleHeader = Selector('h2').withText('Welcome to our store')
-        this.registerLink = Selector('a').withText('Register')
-        this.loginLink = Selector('a').withText('Log in')
-        this.wishListLink = Selector('a').withText('Wishlist')
-        this.shoppingCartLink = Selector('a').withText('Shopping cart')
-        this.myAccountLink = Selector('a').withText('My Account')
-        this.logOutLink = Selector('a').withText('Log out')
+        this.subtitleHeader = Selector('h2').withText('Welcome to our store');
+        this.registerLink = Selector("a[class*='ico-register']");
+        this.loginLink = Selector("a[class*='ico-login']");
+        this.wishListLink = Selector("a[class*='ico-wishlist']");
+        this.shoppingCartLink = Selector("a[class*='ico-cart']");
+        this.myAccountLink = Selector("a[class*='ico-account']");
+        this.logOutLink = Selector("a[class*='ico-logout']");
         this.currencyList = Selector('select#customerCurrency');
     }
 

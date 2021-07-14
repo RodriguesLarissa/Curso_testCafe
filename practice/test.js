@@ -34,7 +34,6 @@ fixture.meta('version', '1')("Tests")
 
 test.only
     ("First Test", async t =>{
-        const developerNameElement = 
         await developerName.with({ visibilityCheck: true })();
         await t
             .typeText(developerName, "Larissa")

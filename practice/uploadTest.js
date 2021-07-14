@@ -8,9 +8,9 @@ fixture("File Upload Fixture")
 
 test("File Upload Test", async t =>{
     await t
-        .setFilesToUpload(fileUpload, '../upload/img.jpg')
+        .setFilesToUpload(fileUpload, 'upload/img.jpg')
         .clearUpload(fileUpload)
-        .setFilesToUpload(fileUpload, '../upload/img.jpg')
+        .setFilesToUpload(fileUpload, 'upload/img.jpg')
         .debug()
         .click(fileUploadButton);
 });
