@@ -13,7 +13,11 @@ var randomNumber = Math.floor(Math.random() * 10000);
 fixture("Registration Fixture")
     .page(URL);
     
-test('Assert Home Page Test', async t =>{
+test.meta({
+    ID: '123',
+    SEVERITY: 'blocker',
+    STORY: '1234'
+})('Assert Home Page Test', async t =>{
     await t
         .expect(getURL()).eql(URL)
         .takeScreenshot()

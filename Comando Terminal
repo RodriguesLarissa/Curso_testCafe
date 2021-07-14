@@ -38,3 +38,14 @@ testcafe chrome tests.js --video artifacts/videos
     singleFile(boolean)
     ffmpegPath(string)
     pathPattern(string)
+
+//Allure extension
+testCafe
+    .createRunner()
+    .src('path/to/test/file.js')
+    .browsers('chrome')
+    .reporter('allure') // <-
+    .run();
+
+//Alure View
+allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report
