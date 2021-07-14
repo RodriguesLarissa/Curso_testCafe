@@ -49,3 +49,6 @@ testCafe
 
 //Alure View
 allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report
+
+//Remote Devices
+testcafe remote test/test.js --qr-code
